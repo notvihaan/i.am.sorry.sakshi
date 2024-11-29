@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I'm Sorry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>I'm Sorry</h1>
+    <p>Hey,</p>
+    <p>It’s me, <b>Vihaan</b>. I know I messed up, and I’ve been blocked. But I really need to say this: I’m truly sorry for whatever hurt I caused.</p>
+    <p>You mean so much to me, and I hope you can give me another chance to make things right.</p>
+    <div class="buttons">
+      <button id="yes-btn">Yes, I forgive you</button>
+      <button id="no-btn">No</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no-btn');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    });
+
+    document.getElementById('yes-btn').addEventListener('click', () => {
+      alert("Thank you for forgiving me! ❤️");
+    });
+  </script>
+</body>
+</html>
